@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./App.css";
-import {Container, Box} from "bloomer";
 import _ from "lodash";
+import Checkout from "./Checkout";
 
 import {TabList, Tab} from "./Tabs";
 
@@ -10,9 +10,9 @@ class App extends Component {
 	render() {
 		return (
 			<TabList>
-				<Tab name='a'>
+				<Tab name='Checkout' default>
 					<div>
-						<h2>Hello A</h2>
+						<Checkout />
 					</div>
 				</Tab>
 				<Tab name='b'>

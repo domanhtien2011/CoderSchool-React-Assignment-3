@@ -15,8 +15,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "bloomer": "^0.6.3",
-    "bulma": "^0.6.1",
     "eslint": "^4.13.0",
     "eslint-plugin-react": "^7.5.1"
   }
