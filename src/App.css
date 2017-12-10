@@ -1,7 +1,30 @@
+HTML {
+  background-color: #2A2D2D;
+}
+
+body {
+  color: #09ADEE;
+}
+
 .selected {
   color: green;
 }
 
 .unselected {
-  color: black;
+  color: #ff4500;
+}
+
+.holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.body {
+  margin-left: 100px;
 }

@@ -1,47 +1,32 @@
 import React, {Component} from "react";
 import "./App.css";
+import {Container, Box} from "bloomer";
+import _ from "lodash";
 
-const _ = require("lodash");
+import {TabList, Tab} from "./Tabs";
+
 class App extends Component {
+
 	render() {
-		const things = {
-			a: (
-				<div>
-					<h2>HelloA</h2>
-				</div>
-			),
-			b: (
-				<div>
-					<h2>HelloB</h2>
-				</div>
-			),
-			c: (
-				<div>
-					<h2>HelloC</h2>
-				</div>
-			)
-		};
-
-		const currentSelected = "a";
-
-		const tabs = _
-			.keys(things)
-			.map((tab) => {
-				const className = (tab === currentSelected)
-					? "selected"
-					: "unselected";
-				return <h1 className={className}>{tab}</h1>;
-			});
-
-		const body = null;
-
 		return (
-			<div className='holder'>
-				<div className="tabs">{tabs}</div>
-				<div className="body">{body}</div>
-			</div>
+			<TabList>
+				<Tab name='a'>
+					<div>
+						<h2>Hello A</h2>
+					</div>
+				</Tab>
+				<Tab name='b'>
+					<div>
+						<h2>Hello B</h2>
+					</div>
+				</Tab>
+				<Tab name='c'>
+					<div>
+						<h2>Hello C</h2>
+					</div>
+				</Tab>
+			</TabList>
 		);
-
 	}
 }
 
