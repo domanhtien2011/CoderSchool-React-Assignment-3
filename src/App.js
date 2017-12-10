@@ -1,21 +1,48 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import "./App.css";
 
+const _ = require("lodash");
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+	render() {
+		const things = {
+			a: (
+				<div>
+					<h2>HelloA</h2>
+				</div>
+			),
+			b: (
+				<div>
+					<h2>HelloB</h2>
+				</div>
+			),
+			c: (
+				<div>
+					<h2>HelloC</h2>
+				</div>
+			)
+		};
+
+		const currentSelected = "a";
+
+		const tabs = _
+			.keys(things)
+			.map((tab) => {
+				const className = (tab === currentSelected)
+					? "selected"
+					: "unselected";
+				return <h1 className={className}>{tab}</h1>;
+			});
+
+		const body = null;
+
+		return (
+			<div className='holder'>
+				<div className="tabs">{tabs}</div>
+				<div className="body">{body}</div>
+			</div>
+		);
+
+	}
 }
 
 export default App;
