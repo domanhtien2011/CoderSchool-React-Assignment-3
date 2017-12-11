@@ -1,18 +1,19 @@
 import React, {Component} from "react";
 import "./App.css";
-import _ from "lodash";
 import Checkout from "./Checkout";
+import {withStripe} from "./StripeApj";
 
 import {TabList, Tab} from "./Tabs";
 
 class App extends Component {
 
 	render() {
+		const WrappedCheckout = withStripe(Checkout, "pk_test_cACAcrZM0rSSxJdoPyEqYu2e", "sk_test_AttO0bEjMwXOEqt6E5Ffm5eC");
 		return (
 			<TabList>
 				<Tab name='Checkout' default>
 					<div>
-						<Checkout />
+						<WrappedCheckout/>
 					</div>
 				</Tab>
 				<Tab name='b'>
