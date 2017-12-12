@@ -21,8 +21,6 @@ const request = (route, key, method, postData) => {
 	}).then((data) => data.json());
 };
 
-
-
 export function withStripe(WrappedComponent, publicKey, secretKey) {
 	return class extends React.Component {
 		postPublic(route, postData) {

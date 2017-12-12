@@ -5,6 +5,7 @@ class Checkout extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			success_message: "",
 			latestCharge: "None"
 		};
 		this.createCharge = this
@@ -14,8 +15,9 @@ class Checkout extends Component {
 
 	createCharge() {
 		// create a token use the token to create a charge
-		
+
 		this.setState({
+			success_message: "Please wait...",
 			latestCharge: "Creating token...."
 		}, () => {
 			this
@@ -37,7 +39,7 @@ class Checkout extends Component {
 						});
 				})
 				.then((charge) => {
-					this.setState({latestCharge: charge.id});
+					this.setState({success_message: "Successfully created charge!", latestCharge: charge.id});
 				});
 		});
 	}
@@ -47,6 +49,7 @@ class Checkout extends Component {
 			<div>
 				<h1>Checkout</h1>
 				<button className='button is-primary is-small' onClick={this.createCharge}>Charge</button>
+				<p>Charge status: {this.state.success_message}</p>
 				<p>Latest Charge: {this.state.latestCharge}</p>
 			</div>
 		);
