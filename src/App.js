@@ -16,14 +16,9 @@ class App extends Component {
 						<WrappedCheckout/>
 					</div>
 				</Tab>
-				<Tab name='b'>
+				<Tab name='Tab'>
 					<div>
-						<h2>Hello B</h2>
-					</div>
-				</Tab>
-				<Tab name='c'>
-					<div>
-						<h2>Hello C</h2>
+						<h2>Tab</h2>
 					</div>
 				</Tab>
 			</TabList>

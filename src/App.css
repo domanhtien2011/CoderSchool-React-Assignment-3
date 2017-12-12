@@ -2,6 +2,10 @@ HTML {
   background-color: #2A2D2D;
 }
 
+.label {
+  color: #09ADEE;
+}
+
 body {
   color: #09ADEE;
 }
@@ -26,4 +30,16 @@ body {
 
 .body {
   margin-left: 100px;
+}
+
+.error {
+  color: red;
+}
+
+.false {
+  display: none;
+}
+
+.true {
+  display: block;
 }
