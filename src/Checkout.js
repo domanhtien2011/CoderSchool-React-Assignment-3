@@ -14,27 +14,7 @@ class Checkout extends Component {
 
 	createCharge() {
 		// create a token use the token to create a charge
-		// const request = (route, key, method, postData) => {
-		// 	const dataStr = (method === "GET")
-		// 		? null
-		// 		: _
-		// 			.toPairs(postData)
-		// 			.map((a) => {
-		// 				return `${a[0]}=${a[1]}`;
-		// 			})
-		// 			.join("&");
-
-		// 	return fetch(`https://api.stripe.com/v1/${route}`, {
-		// 		method: "POST",
-		// 		headers: {
-		// 			"Accept": "application/json",
-		// 			"Authorization": `Bearer ${key}`,
-		// 			"Content-Type": "application/x-www-form-urlencoded"
-		// 		},
-		// 		body: dataStr
-		// 	}).then((data) => data.json());
-		// };
-
+		
 		this.setState({
 			latestCharge: "Creating token...."
 		}, () => {
